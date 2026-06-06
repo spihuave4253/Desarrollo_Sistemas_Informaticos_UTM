@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Listado de tickets</title>
+</head>
+<body>
+
+    <header>
+        <div>
+            <img src="assets/img/logo.png" alt="Logo Help Desk" width="50" height="50">
+            <h1>Help Desk - Data Center</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reportar.html">Reportar incidente</a></li>
+                <li><a href="tickets.html">Ver tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tickets registrados (simulación)</h2>
+            <article>
+                <h3>Incidentes activos y resueltos</h3>
+                <!-- Tabla con tickets -->
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Categoría</th>
+                            <th>Prioridad</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1001</td>
+                            <td>Caída del switch principal</td>
+                            <td>Red</td>
+                            <td>Alta</td>
+                            <td>Abierto</td>
+                            <td>2026-06-01</td>
+                        </tr>
+                        <tr>
+                            <td>1002</td>
+                            <td>Disco duro falla en servidor DB</td>
+                            <td>Hardware</td>
+                            <td>Media</td>
+                            <td>En progreso</td>
+                            <td>2026-06-02</td>
+                        </tr>
+                        <tr>
+                            <td>1003</td>
+                            <td>Error en aplicación de monitorización</td>
+                            <td>Software</td>
+                            <td>Baja</td>
+                            <td>Resuelto</td>
+                            <td>2026-06-03</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">Total de tickets mostrados: 3</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 Help Desk Data Center - DSI - Universidad Técnica de Manabí</p>
+        <p>Contacto: Sully Valeria Pihuave Salazar</p>
+        <p>Correo: helpdesk@utm.edu.ec</p>
+    </footer>
+
+</body>
+</html>
