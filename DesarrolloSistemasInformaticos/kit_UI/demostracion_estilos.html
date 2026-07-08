@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk - Design System</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Elaborado por: Sully Valeria Pihuave Salalar-->
+</head>
+<body>
+
+    <header>
+        <h1>UI Design System - Help Desk</h1>
+        <p>Librería de componentes UI reutilizables para el sistema de gestión de incidentes.</p>
+        <nav>
+            <a href="#botones">Botones</a>
+            <a href="#formularios">Formularios</a>
+            <a href="#tarjetas">Tarjetas</a>
+            <a href="#alertas">Alertas</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN BOTONES -->
+        <section id="botones">
+            <h2>Botones</h2>
+            <div class="component-group">
+                <button class="btn btn-primary">Primario</button>
+                <button class="btn btn-secondary">Secundario</button>
+                <button class="btn btn-danger">Peligro</button>
+                <button class="btn btn-primary" disabled>Primario (deshabilitado)</button>
+                <button class="btn btn-secondary" disabled>Secundario (deshabilitado)</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN FORMULARIOS -->
+        <section id="formularios">
+            <h2>Formularios</h2>
+            <div class="component-group">
+                <div class="form-group">
+                    <label for="campo-texto">Campo de texto</label>
+                    <input type="text" id="campo-texto" placeholder="Escribe algo...">
+                </div>
+                <div class="form-group">
+                    <label for="select-demo">Lista desplegable</label>
+                    <select id="select-demo">
+                        <option value="">Selecciona...</option>
+                        <option value="hardware">Hardware</option>
+                        <option value="red">Red</option>
+                        <option value="software">Software</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="textarea-demo">Área de texto</label>
+                    <textarea id="textarea-demo" rows="3" placeholder="Descripción detallada..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TARJETAS -->
+        <section id="tarjetas">
+            <h2>Tarjetas</h2>
+            <div class="component-group cards-group">
+                <article class="card">
+                    <div class="card-header">
+                        <span class="badge badge-alta">Alta</span>
+                        <span class="ticket-id">#0001</span>
+                    </div>
+                    <h3>Caída del switch principal</h3>
+                    <p><strong>Categoría:</strong> Red</p>
+                    <p>Caída del switch principal en el rack 3. Se requiere revisión urgente.</p>
+                    <div class="card-footer">
+                        <span>2026-07-01</span>
+                        <span class="estado abierto">Abierto</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <span class="badge badge-media">Media</span>
+                        <span class="ticket-id">#0002</span>
+                    </div>
+                    <h3>Disco duro falla en servidor DB</h3>
+                    <p><strong>Categoría:</strong> Hardware</p>
+                    <p>El servidor de base de datos presenta fallas en el disco duro principal. Riesgo de pérdida de datos.</p>
+                    <div class="card-footer">
+                        <span>2026-07-02</span>
+                        <span class="estado en-progreso">En progreso</span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <span class="badge badge-baja">Baja</span>
+                        <span class="ticket-id">#0003</span>
+                    </div>
+                    <h3>Error en aplicación de monitorización</h3>
+                    <p><strong>Categoría:</strong> Software</p>
+                    <p>La aplicación de monitoreo no muestra las métricas del servidor web. Error al cargar el dashboard.</p>
+                    <div class="card-footer">
+                        <span>2026-07-05</span>
+                        <span class="estado resuelto">Resuelto</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ALERTAS -->
+        <section id="alertas">
+            <h2>Alertas</h2>
+            <div class="component-group">
+                <span class="badge badge-alta">Alta</span>
+                <span class="badge badge-media">Media</span>
+                <span class="badge badge-baja">Baja</span>
+                <span class="badge badge-info">Info</span>
+                <span class="badge badge-success">Éxito</span>
+                <span class="badge badge-warning">Advertencia</span>
+                <span class="badge badge-danger">Peligro</span>
+            </div>
+            <p><small>Etiquetas de colores para prioridad y estados.</small></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2026 Help Desk Data Center - DSI - Universidad Técnica de Manabí</p>
+        <p>Contacto: Sully Valeria Pihuave Salazar</p>
+        <p>Correo: helpdesk@utm.edu.ec</p>
+    </footer>
+
+</body>
+</html>

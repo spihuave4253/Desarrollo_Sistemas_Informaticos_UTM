@@ -1,0 +1,456 @@
+/* 
+    HELP DESK - DESIGN SYSTEM
+    Variables, estilos base y componentes
+    Elaborado por: Sully Valeria Pihuave Salalar
+*/
+
+/* ---- 1. VARIABLES CSS ---- */
+:root {
+    /* Paleta de colores corporativa */
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-primary-light: #60a5fa;
+
+    --color-secondary: #64748b;
+    --color-secondary-dark: #475569;
+    --color-secondary-light: #94a3b8;
+
+    --color-success: #22c55e;
+    --color-success-dark: #16a34a;
+    --color-success-light: #86efac;
+
+    --color-danger: #ef4444;
+    --color-danger-dark: #dc2626;
+    --color-danger-light: #fca5a5;
+
+    --color-warning: #f59e0b;
+    --color-warning-dark: #d97706;
+    --color-warning-light: #fcd34d;
+
+    --color-info: #3b82f6;
+    --color-info-dark: #2563eb;
+    --color-info-light: #93c5fd;
+
+    /* Colores de texto y fondo */
+    --color-text: #1e293b;
+    --color-text-light: #64748b;
+    --color-bg: #f8fafc;
+    --color-white: #ffffff;
+    --color-border: #e2e8f0;
+
+    /* Tipografía */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+    --font-size-small: 0.875rem;
+    --font-size-large: 1.25rem;
+    --font-size-xl: 1.5rem;
+
+    /* Espaciado */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Sombras y bordes */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* ---- 2. ESTILOS BASE ---- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    padding: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---- 3. HEADER Y NAVEGACIÓN ---- */
+header {
+    background: var(--color-white);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+    border-bottom: 4px solid var(--color-primary);
+}
+
+header h1 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+header p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+header nav {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+header nav a:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* ---- 4. SECCIONES ---- */
+section {
+    background: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-xl);
+}
+
+section h2 {
+    font-size: var(--font-size-large);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: var(--spacing-sm);
+}
+
+.component-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: center;
+    margin: var(--spacing-md) 0;
+}
+
+.component-group .form-group {
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+
+code {
+    background: var(--color-border);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* ---- 5. BOTONES ---- */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-family);
+    min-width: 120px;
+}
+
+/* Botón Primario */
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.btn-primary:focus {
+    outline: 3px solid var(--color-primary-light);
+    outline-offset: 2px;
+}
+
+/* Botón Secundario */
+.btn-secondary {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background: var(--color-secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.btn-secondary:focus {
+    outline: 3px solid var(--color-secondary-light);
+    outline-offset: 2px;
+}
+
+/* Botón Peligro */
+.btn-danger {
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+.btn-danger:hover,
+.btn-danger:focus {
+    background: var(--color-danger-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.btn-danger:focus {
+    outline: 3px solid var(--color-danger-light);
+    outline-offset: 2px;
+}
+
+/* Botones deshabilitados */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* ---- 6. FORMULARIOS  ---- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: var(--color-white);
+    transition: var(--transition);
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* ---- 7. TARJETAS ---- */
+.cards-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    width: 100%;
+}
+
+.card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+}
+
+.card-header .ticket-id {
+    font-weight: 700;
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.card p {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--color-text);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-border);
+    font-size: var(--font-size-small);
+    color: var(--color-text-light);
+}
+
+/* Estados de los tickets */
+.estado {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+.estado.abierto {
+    background: #fef3c7;
+    color: #92400e;
+}
+.estado.en-progreso {
+    background: #dbeafe;
+    color: #1e40af;
+}
+.estado.resuelto {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* ---- 8. ALERTAS  ---- */
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.badge-alta {
+    background: #fee2e2;
+    color: #991b1b;
+}
+.badge-media {
+    background: #fef3c7;
+    color: #92400e;
+}
+.badge-baja {
+    background: #dbeafe;
+    color: #1e40af;
+}
+.badge-info {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+.badge-success {
+    background: #d1fae5;
+    color: #065f46;
+}
+.badge-warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+.badge-danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ---- 9. FOOTER ---- */
+footer {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--color-text-light);
+    font-size: var(--font-size-small);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--spacing-xl);
+}
+
+/* ---- 10. RESPONSIVE (Ajustes adicionales) ---- */
+@media (max-width: 768px) {
+    body {
+        padding: var(--spacing-md);
+    }
+
+    section {
+        padding: var(--spacing-md);
+    }
+
+    .btn {
+        min-width: 100px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+
+    .cards-group {
+        grid-template-columns: 1fr;
+    }
+
+    .component-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .component-group .form-group {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-header {
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+    .card-footer {
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+}
