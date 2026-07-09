@@ -3,71 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Desk - Reportar incidente</title>
+    <title>Help Desk - Reportar incidente</title>    
+    <link rel="stylesheet" href="kit_UI/style.css">
+    <!--Elaborado por: Sully Valeria Pihuave Salalar-->
+</head>
 </head>
 <body>
-
     <header>
-        <div>
-            <img src="assets/img/logo.png" alt="Logo Help Desk" width="50" height="50">
-            <h1>Help Desk - Data Center</h1>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="Logo Help Desk" width="50" height="50">
+                <h1>Help Desk - Data Center</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="reportar.html" class="active">Reportar incidente</a></li>
+                    <li><a href="tickets.html">Ver tickets</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="reportar.html">Reportar incidente</a></li>
-                <li><a href="tickets.html">Ver tickets</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
         <section>
             <h2>Formulario de reporte de incidentes</h2>
-            <article>
-                <h3>Complete los datos del fallo</h3>
-                <form action="#" method="get" id="formIncidente">
-                    <!-- Titulo -->
-                    <label for="titulo">Título del incidente:</label>
-                    <input type="text" id="titulo" name="titulo" required minlength="5" maxlength="100" placeholder="Ej. Servidor principal sin respuesta">
-                    <br><br>
+            <p>Complete los datos del fallo. Todos los campos son obligatorios.</p>
 
-                    <!-- Categorias -->
-                    <label for="categoria">Categoría:</label>
+            <form action="#" method="get" id="formIncidente" class="form-grid">
+                <!-- Campo: Título -->
+                <div class="form-group full-width">
+                    <label for="titulo">Título del incidente</label>
+                    <input type="text" id="titulo" name="titulo" required minlength="5" maxlength="100" placeholder="Ej. Servidor principal sin respuesta">
+                </div>
+
+                <!-- Campo: Categoría -->
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
                     <select id="categoria" name="categoria" required>
                         <option value="">Seleccione una categoría</option>
                         <option value="hardware">Hardware</option>
                         <option value="red">Red</option>
                         <option value="software">Software</option>
                     </select>
-                    <br><br>
+                </div>
 
-                    <!-- Botones de opcion para prioridad -->
+                <!-- Campo: Prioridad -->
+                <div class="form-group">
                     <fieldset>
-                        <legend>Prioridad:</legend>
-                        <label>
-                            <input type="radio" name="prioridad" value="alta" required> Alta
-                        </label>
-                        <label>
-                            <input type="radio" name="prioridad" value="media"> Media
-                        </label>
-                        <label>
-                            <input type="radio" name="prioridad" value="baja"> Baja
-                        </label>
+                        <legend>Prioridad</legend>
+                        <label><input type="radio" name="prioridad" value="alta" required> Alta</label>
+                        <label><input type="radio" name="prioridad" value="media"> Media</label>
+                        <label><input type="radio" name="prioridad" value="baja"> Baja</label>
                     </fieldset>
-                    <br>
+                </div>
 
-                    <!-- Area de texto para descripcion detallada -->
-                    <label for="descripcion">Descripción detallada:</label>
-                    <textarea id="descripcion" name="descripcion" rows="5" cols="50" required placeholder="Describa el fallo, equipos afectados, etc."></textarea>
-                    <br><br>
+                <!-- Campo: Descripción -->
+                <div class="form-group full-width">
+                    <label for="descripcion">Descripción detallada</label>
+                    <textarea id="descripcion" name="descripcion" rows="5" required placeholder="Describa el fallo, equipos afectados, etc."></textarea>
+                </div>
 
-                    <!-- Boton de envio -->
-                    <button type="submit">Enviar reporte</button>
-                    <button type="reset">Limpiar formulario</button>
-                </form>
-                <p><small>* Todos los campos son obligatorios. Al enviar, se generará un ticket.</small></p>
-            </article>
+                <!-- Botones de acción -->
+                <div class="form-actions full-width">
+                    <button type="submit" class="btn btn-primary">Enviar reporte</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar formulario</button>
+                </div>
+            </form>
         </section>
     </main>
 
