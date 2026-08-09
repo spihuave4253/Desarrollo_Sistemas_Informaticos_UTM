@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <div class="jumbotron bg-light p-5 rounded-3">
+    <h1 class="display-4">Help Desk Data Center</h1>
+    <p class="lead">Sistema de gestión de incidentes para el Data Center</p>
+    <hr class="my-4">
+    <p>Reporta, asigna y da seguimiento a incidentes de hardware, red y software.</p>
+    <div class="d-flex gap-2">
+      <a class="btn btn-primary btn-lg" routerLink="/tickets">Ver tickets</a>
+      <a class="btn btn-success btn-lg" routerLink="/crear">Reportar incidente</a>
+    </div>
+  </div>
+
+  <!-- Tarjetas de resumen -->
+  <div class="row mt-4">
+    <div class="col-md-4 mb-3" *ngFor="let stat of stats">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">{{ stat.label }}</h5>
+          <p class="display-6">{{ stat.value }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
